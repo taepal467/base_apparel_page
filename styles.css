@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+body {
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: #fdf0f2;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1em;
+}
+
+.logo-img {
+    padding: 3em 0 2em 11em;
+}
+
+.container {
+    display: flex;
+}
+
+.main-content {
+    padding: 1em 11em;
+}
+
+.header {
+    color: hsl(0, 6%, 24%);
+    font-size: 5em;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+}
+
+.custom-text,
+.content {
+    color: hsl(0, 36%, 70%);
+}
+
+.custom-text {
+    font-weight: 300;
+}
+
+.content {
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: -2em;
+    padding-bottom: 2em;
+}
+
+#email-input {
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 30px;
+    color: hsl(0, 6%, 24%);
+    font-weight: 600;
+    opacity: 0.5;
+    padding: 1.5em;
+    width: 27em;
+}
+
+#email-input:invalid {
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+.error-msg {
+    display: none;
+    color: hsl(0, 93%, 68%);
+    font-style: italic;
+    font-weight: 300;
+}
+
+.error-msg.valid {
+    color: rgb(216, 145, 157);
+}
+
+.error-msg.visible,
+.error-icon.visible {
+    display: block;
+}
+
+.error-icon {
+    display: none;
+    position: absolute;
+    bottom: 80px;
+    left: 30em;
+}
+
+#btn {
+    background-color: rgb(216, 145, 157);
+    border:none;
+    border-radius: 30px;
+    width: 6em;
+    padding: 1.25em 4em;
+    position: absolute;
+    z-index: 1;
+    right: 60em;
+}
+
+.desktop-hero-img {
+    margin-top: -9em;
+}
+
+.mobile-hero-img {
+    display: none;
+}
+/* FOOTER */
+.attribution { 
+    color: hsl(0, 6%, 24%);
+    font-size: 1em;
+    font-weight: 300; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(0, 6%, 24%);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: hsl(0, 36%, 70%);
+}
+
+/* MEDIA QUERY */
+@media (max-width: 600px) {
+    body {
+        text-align: center;
+    }
+
+   .container {
+       display: flex;
+       flex-direction: column-reverse;
+   }
+
+  .desktop-hero-img {
+      display:none;
+  }
+
+  .mobile-hero-img {
+      display: flex;
+  }
+
+  .logo-img {
+      padding: 1.5em 12em 1.5em 0;
+  }
+
+  .header {
+      font-size: 4em;
+      margin-left: -3.2em;
+      padding-left: 1.5em;
+  }
+
+  .content {
+      margin: 0 -100px;
+
+  }
+
+  #email-input {
+      margin-left: -150px;
+  }
+
+  #btn {
+      left: 27em; 
+      bottom: -14.25em;
+      padding: 1.25em 2em;
+  }
+
+  .error-icon {
+      left: 20em;
+      bottom: -10.75em;
+  }
+
+}
